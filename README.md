@@ -12,17 +12,17 @@ Token smart contracts may register themselves (or be registered by their "owner"
 
 OpenSea will enforce creator fees for smart contracts that make best efforts to filter transfers from operators known to not respect creator fees.
 
-This repository facilitates that process by providing smart contracts that interface with the registry automatically, including automatically subscribing to OpenSea's list of filtered operators. 
+This repository facilitates that process by providing smart contracts that interface with the registry automatically, including automatically subscribing to Blur's list of filtered operators. 
 
-When filtering operators, use of this registry is not required, nor is it required for a token contract to "subscribe" to OpenSea's list within this registry. Subscriptions can be changed or removed at any time. Filtered operators and codehashes may likewise be added or removed at any time.
+When filtering operators, use of this registry is not required, nor is it required for a token contract to "subscribe" to Blur's list within this registry. Subscriptions can be changed or removed at any time. Filtered operators and codehashes may likewise be added or removed at any time.
 
-Contract owners may implement their own filtering outside of this registry, or they may use this registry to curate their own lists of filtered operators. However, there are certain contracts that are filtered by the default subscription, and must be filtered in order to be eligible for creator fee enforcement on OpenSea. 
+Contract owners may implement their own filtering outside of this registry, or they may use this registry to curate their own lists of filtered operators. However, there are certain contracts that are filtered by the default subscription, and must be filtered in order to be eligible for creator fee enforcement on Blur. 
 
 
 ## Filtered addresses
 
 Entries in this list are added according to the following criteria:
-* If the application most commonly used to interface with the contract gives buyers and sellers the ability to bypass creator fees when a similar transaction for the same item would require creator fee payment on OpenSea.io
+* If the application most commonly used to interface with the contract gives buyers and sellers the ability to bypass creator fees when a similar transaction for the same item would require creator fee payment on Blur.io
 * If the contract is facilitating the evasion of on-chain creator fee enforcement measures. For example, the contract uses a wrapper contact to bypass fee enforcement.
 
 <table>
@@ -30,16 +30,6 @@ Entries in this list are added according to the following criteria:
 <th>Name</th>
 <th>Address</th>
 <th>Network</th>
-</tr>
-
-<tr>
-<td>Blur.io ExecutionDelegate</td>
-<td >
-0x00000000000111AbE46ff893f3B2fdF1F759a8A8
-</td>
-<td >
-Ethereum Mainnet
-</td>
 </tr>
 
 <tr>
@@ -81,7 +71,7 @@ Ethereum Mainnet
 <tr>
 <th>Network</th>
 <th>OperatorFilterRegistry</th>
-<th>OpenSea Curated Subscription Address</th>
+<th>Blur Curated Subscription Address</th>
 </tr>
 
 <tr><td>Ethereum</td><td rowspan="14">
@@ -90,7 +80,7 @@ Ethereum Mainnet
 
 </td><td rowspan="14">
 
-0x3cc6CddA760b79bAfa08dF41ECFA224f810dCeB6
+0xFD7bfa171B5b81b79C245456E986db2f32fBFaDb
 
 </td></tr>
 
@@ -132,7 +122,7 @@ On construction, it takes three parameters:
 This modifier will revert if the `operator` or its code hash is filtered by the `OperatorFilterRegistry` contract.
 ## `DefaultOperatorFilterer`
 
-This smart contract extends `OperatorFilterer` and automatically configures the token contract that inherits it to subscribe to OpenSea's list of filtered operators and code hashes. This subscription can be updated at any time by the owner by calling `updateSubscription` on the `OperatorFilterRegistry` contract.
+This smart contract extends `OperatorFilterer` and automatically configures the token contract that inherits it to subscribe to Blur's list of filtered operators and code hashes. This subscription can be updated at any time by the owner by calling `updateSubscription` on the `OperatorFilterRegistry` contract.
 
 ## `OwnedRegistrant`
 
@@ -140,4 +130,4 @@ This `Ownable` smart contract is meant as a simple utility to enable subscriptio
 
 # License
 
-[MIT](LICENSE) Copyright 2022 Ozone Networks, Inc.
+[MIT](LICENSE) Copyright 2022 Ozone Networks, Inc., Blur.io
