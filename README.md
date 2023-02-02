@@ -10,7 +10,7 @@ Token smart contracts may register themselves (or be registered by their "owner"
 
 ## Creator Fee Enforcement
 
-OpenSea will enforce creator fees for smart contracts that make best efforts to filter transfers from operators known to not respect creator fees.
+Blur will enforce creator fees for smart contracts that make best efforts to filter transfers from operators known to not respect creator fees. Unfortunately, OpenSea makes royalties optional on collections that are tradeable on Blur, so it is only possible to earn royalties on Blur, or OpenSea, but not both platforms at once. As a result, OpenSea must be filtered in order for a collection to trade on Blur with full royalty protection.
 
 This repository facilitates that process by providing smart contracts that interface with the registry automatically, including automatically subscribing to Blur's list of filtered operators. 
 
@@ -45,14 +45,8 @@ Entries in this list are added according to the following criteria:
 </tr>
 
 <tr>
-<td>X2Y2 ERC721Delegate</td>
-<td>0xf849de01b080adc3a814fabe1e2087475cf2e354</td>
-<td>Ethereum Mainnet</td>
-</tr>
-
-<tr>
-<td>X2Y2 ERC1155Delegate</td>
-<td>0x024ac22acdb367a3ae52a3d94ac6649fdc1f0779</td>
+<td>Seaport 1.1</td>
+<td>0x1E0049783F008A0085193E00003D00cd54003c71</td>
 <td>Ethereum Mainnet</td>
 </tr>
 
@@ -80,7 +74,7 @@ Entries in this list are added according to the following criteria:
 
 </td><td rowspan="14">
 
-0xFD7bfa171B5b81b79C245456E986db2f32fBFaDb
+0x9dC5EE2D52d014f8b81D662FA8f4CA525F27cD6b
 
 </td></tr>
 
@@ -131,3 +125,4 @@ This `Ownable` smart contract is meant as a simple utility to enable subscriptio
 # License
 
 [MIT](LICENSE) Copyright 2022 Ozone Networks, Inc., Blur.io
+
