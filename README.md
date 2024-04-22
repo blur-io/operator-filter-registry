@@ -1,3 +1,4 @@
+
 # Operator Filter Registry
 
 This repository contains a number of tools to help token contracts manage the operators allowed to transfer tokens on behalf of users - including the smart contracts and delegates of marketplaces that do not respect creator fees.
@@ -74,7 +75,7 @@ Entries in this list are added according to the following criteria:
 
 </td><td rowspan="14">
 
-0x9dC5EE2D52d014f8b81D662FA8f4CA525F27cD6b
+0xB010C69F1FAe0D71dbdaB1b92a7b8f407C60809d
 
 </td></tr>
 
